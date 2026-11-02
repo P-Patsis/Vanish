@@ -22,7 +22,7 @@ Newest first. After every verified build: add an entry (Changed / Verified on de
 - Device test, in this order: (1) camera permission and denial messages, (2) model loads, (3) fps (tap the fps pill for details), (4) turn on
   "Show the person mask" and check it covers YOU (if the room is red instead, tick Invert), (5) walk across the view, then stand still, (6) photo, video, GIF,
   (7) Flip camera, (8) Add to Home screen, then push a change and check the app updates itself.
-- GitHub Pages: the repo is private and the free plan cannot publish Pages from a private repo. Needs the repo made public (user decision), or another host.
+- (done) Repo made public at the user's request and Pages enabled (branch `main`, `/`): https://p-patsis.github.io/Vanish/ . Served files checked: page, sw.js (same VERSION as local), manifest, main.js, icon all return 200.
 
 ## 2026-11-02: project set up
 **Changed**

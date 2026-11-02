@@ -36,4 +36,4 @@
   because palette quantising is the slow part on a phone. A library (e.g. gif.js, about 15 KB plus a worker) would look better; not needed for a toy.
 - **Service worker** copied from Finger Fight. Heavy cache `vn-heavy` is cache-first (jsdelivr mediapipe + mediapipe-models), shell is network-first
   with versioned precache. `node tools/stamp.mjs` before every commit that changes a precached file.
-- **GitHub Pages is not available on the free plan for a private repo.** The repo `P-Patsis/Vanish` was created private. Needs to be public for Pages.
+- **GitHub Pages is not available on the free plan for a private repo.** The repo was created private; on the user's yes it was made public and Pages enabled (2026-11-02). Live: https://p-patsis.github.io/Vanish/ . Alternative if it must go private again: Cloudflare Pages / Netlify connected to the repo.
