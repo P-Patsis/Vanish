@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vanish</title>
+<meta name="description" content="An invisibility toy: the camera paints you out of the picture.">
+<meta name="theme-color" content="#0b0f1e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="stage">
+  <canvas id="view" width="16" height="9"></canvas>
+  <video id="cam" playsinline muted autoplay></video>
+
+  <div id="hud" hidden>
+    <button id="fps" type="button" aria-label="Frame rate; tap for details">-- fps</button>
+    <div id="hint" hidden></div>
+  </div>
+  <div id="count" hidden></div>
+
+  <section id="status">
+    <h1 id="stTitle">Vanish</h1>
+    <p id="stMsg">Point the camera at the room, step into view, and the picture paints you out.</p>
+    <div id="stBtns"><button id="startBtn" class="btn primary" type="button">Start camera</button></div>
+  </section>
+
+  <nav id="bar" hidden>
+    <button id="peekBtn" class="btn" type="button" title="Hold to see the real camera picture">Peek</button>
+    <button id="bgBtn" class="btn" type="button" title="Step out of view; takes the picture after 3 seconds">Clean bg</button>
+    <button id="photoBtn" class="btn big" type="button">Photo</button>
+    <button id="recBtn" class="btn big rec" type="button">Record</button>
+    <button id="gifBtn" class="btn big" type="button">GIF</button>
+    <button id="flipBtn" class="btn" type="button">Flip</button>
+    <button id="setBtn" class="btn" type="button" aria-label="Settings">&#9881;</button>
+  </nav>
+
+  <section id="settings" hidden>
+    <h2>Settings</h2>
+    <label>Picture quality
+      <select id="qSel"><option value="fast">Fast (320)</option><option value="balanced">Balanced (480)</option><option value="sharp">Sharp (720)</option></select>
+    </label>
+    <label>Background learning
+      <select id="lSel"><option value="slow">Slow, steady</option><option value="normal">Normal</option><option value="fast">Fast, follows changes</option></select>
+    </label>
+    <label class="row"><input id="maskChk" type="checkbox"> Show the person mask (red)</label>
+    <label class="row"><input id="invChk" type="checkbox"> Invert the mask (use if the room vanishes instead of you)</label>
+    <div class="actions">
+      <button id="resetBtn" class="btn" type="button">Forget the background</button>
+      <button id="setClose" class="btn primary" type="button">Done</button>
+    </div>
+  </section>
+
+  <section id="sheet" hidden>
+    <div id="preview"></div>
+    <p id="fileInfo"></p>
+    <div class="actions">
+      <button id="saveBtn" class="btn primary" type="button">Save</button>
+      <button id="shareBtn" class="btn" type="button" hidden>Share</button>
+      <button id="sheetClose" class="btn" type="button">Close</button>
+    </div>
+  </section>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
